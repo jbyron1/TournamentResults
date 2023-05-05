@@ -309,7 +309,7 @@ def main():
         else:
             event_dict = getEvents(session, link)
             for event in event_dict:
-                print(event_dict[event][0] + " - " + event_dict[event][1])
+                print("<h3>" + event_dict[event][0] + " - " + event_dict[event][1] + "</h3>")
                 players = getEventResults(session, event, ds)
                 generateEventResults(event, players, int(args.places), ds, session)
                 time.sleep(2)
